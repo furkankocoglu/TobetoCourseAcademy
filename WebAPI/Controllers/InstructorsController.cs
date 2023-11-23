@@ -9,8 +9,8 @@ namespace WebAPI.Controllers
 	[ApiController]
 	public class InstructorsController : ControllerBase
 	{
-		IInsturctorService _instructorService;
-		public InstructorsController(IInsturctorService instructorService)
+		IInstructorService _instructorService;
+		public InstructorsController(IInstructorService instructorService)
 		{
 			_instructorService = instructorService;
 		}

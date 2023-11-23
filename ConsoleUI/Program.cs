@@ -143,7 +143,7 @@ namespace ConsoleUI
 
 		private static void InstructorTest()
 		{
-			InstructorManager instructorManager = new InstructorManager(new EfIntructorDal());
+			InstructorManager instructorManager = new InstructorManager(new EfInstructorDal());
 
 			Instructor instructor1 = new Instructor
 			{
