@@ -1,16 +1,11 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstracts;
-using DataAccess.Concretes;
-using DataAccess.Concretes.EntityFramework;
 using Entites.Concretes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Concretes
 {
@@ -23,7 +18,7 @@ namespace Business.Concretes
         {
             _categoryDal = categoryDal;
         }
-
+        [ValidationAspect(typeof(CategoryValidator))]
         public IResult Add(Category category)
         {
             _categoryDal.Add(category);

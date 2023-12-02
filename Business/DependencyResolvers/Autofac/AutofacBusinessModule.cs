@@ -32,6 +32,7 @@ namespace Business.DependencyResolvers.Autofac
 				.EnableInterfaceInterceptors(new ProxyGenerationOptions()
 				{
 					Selector = new AspectInterceptorSelector()
+                    
 				}).SingleInstance();
 		}
     }

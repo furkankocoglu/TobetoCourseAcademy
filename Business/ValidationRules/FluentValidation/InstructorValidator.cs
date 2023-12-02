@@ -12,7 +12,8 @@ namespace Business.ValidationRules.FluentValidation
     {
         public InstructorValidator()
         {
-            
-        }
+            RuleFor(i => i.Name).NotEmpty();
+            RuleFor(i => i.Name).MinimumLength(2);
+        }      
     }
 }

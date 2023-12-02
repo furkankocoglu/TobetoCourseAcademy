@@ -14,11 +14,7 @@ namespace Business.ValidationRules.FluentValidation
         public CategoryValidator()
         {
             RuleFor(c => c.Name).NotEmpty();
-            RuleFor(c => c.Name).Must(StartWithB);
-        }
-        private bool StartWithB(string arg)
-        {
-            return arg.StartsWith("B");
-        } 
+            RuleFor(c => c.Name).MinimumLength(2);
+        }      
     }
 }

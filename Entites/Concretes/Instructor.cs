@@ -12,7 +12,7 @@ namespace Entites.Concretes
     {       
         public int Id { get; set; }
         public string Name { get; set; }
-        public Course[] Courses { get; set; }
+        public Course[]? Courses { get; set; }
 
     }
 }
